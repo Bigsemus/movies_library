@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-width: 99%;
+  margin: 100px 0 100px 0;
+
+  button{
+    cursor: pointer;
+  }
+
+  .header {
+    position: fixed;
+    z-index: 1;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    background-color: #f9d10f;
+
+    p {
+      text-align: center;
+      margin-top: 17px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #3b4d61;
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #3b4d61;
+
+  p {
+    color: honeydew;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 17px;
+    letter-spacing: 1px;
+  }
+}

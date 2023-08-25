@@ -1,0 +1,60 @@
+.wrapSorters {
+  display: flex;
+
+  .wrapSort_BY {
+    margin-bottom: 20px;
+
+    .btnSortBY {
+      width: 142px;
+      height: 34px;
+      font-size: 17px;
+      color: #f9d10f;
+      background-color: #3b4d61;
+      border-radius: 4px;
+      box-shadow: -5px 5px 5px #3b4d61;
+
+      &.active {
+        color: #3b4d61;
+        background-color: darkgray;
+      }
+
+      &:hover {
+        color: #3b4d61;
+        background-color: #f9d10f;
+      }
+
+      &:nth-child(2) {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .wrapSort_ASC_DESC {
+    margin-left: 15px;
+
+    .btnAscDesc {
+      display: block;
+      width: 50px;
+      height: 34px;
+      font-size: 15px;
+      color: #f9d10f;
+      background-color: #3b4d61;
+      border-radius: 4px;
+      box-shadow: -3px 3px 3px #3b4d61;
+
+      &.active {
+        color: #3b4d61;
+        background-color: darkgray;
+      }
+
+      &:hover {
+        color: #3b4d61;
+        background-color: #f9d10f;
+      }
+
+      &:nth-child(2) {
+        margin-top: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.starInput{
+  display: none;
+  position: absolute;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 200ms;
+  &:hover{
+    transform: scale(1.3);
+  }
+}

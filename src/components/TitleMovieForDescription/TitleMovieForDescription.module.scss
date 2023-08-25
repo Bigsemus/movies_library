@@ -1,0 +1,18 @@
+.titleContent {
+  border: none;
+  height: 35px;
+  width: 100%;
+  padding-left: 5px;
+  background-color: #6b7b8c;
+  color: #f9d10f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  font-weight: bold;
+
+  &:hover{
+    color: #3b4d61;
+    background-color: #f9d10f;
+  }
+}

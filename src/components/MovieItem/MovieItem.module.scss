@@ -1,0 +1,42 @@
+.movieCard{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #3b4d61;
+  border-radius: 4px;
+  width: 18%;
+  height: 460px;
+  margin: 0px 0px 3% 3%;
+  background-color: palegoldenrod;
+  box-shadow: -10px 10px 10px #3b4d61;
+  &:hover{
+    transform: scale(1.03);
+    transition: all 0.5s;
+  }
+}
+
+.movieCardMain{
+  display: flex;
+  border: 1px solid #3b4d61;
+  height: 92%;
+}
+
+.blockStars{
+  margin: 9px auto 0;
+}
+
+.titleContent{
+  text-align: center;
+}
+
+.wrapContent{
+  width: calc(100% - 40px);
+  border-left: 1px solid #3b4d61;
+  p{
+    margin: 5px;
+  }
+}
+
+.poster{
+  width: 100%;
+  height: 383px;
+}

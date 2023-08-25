@@ -1,0 +1,27 @@
+.search{
+  width: 300px;
+  border: 2px solid #6b7b8c;
+  min-height: 30px;
+  border-radius: 4px;
+  margin-top: -33px;
+}
+
+.searchMovie{
+  border: none;
+  outline: none;
+  width: 260px;
+  height: 30px;
+  font-size: 17px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.searchMovieBtn{
+  width: 27px;
+  height: 27px;
+  margin-top: 4px;
+  position: absolute;
+  border: none;
+  background: url("../../assets/a-icon-search-3.svg") no-repeat;
+  cursor: pointer;
+}
