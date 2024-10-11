@@ -11,8 +11,8 @@ async function fetchActor(movieID) {
 }
 
 const MoviesService = {
-  fetchMovieList,
   fetchActor,
+  fetchMovieList,
 };
 
 export default MoviesService;

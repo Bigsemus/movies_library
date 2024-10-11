@@ -82,43 +82,82 @@ const movieListSlice = createSlice({
       ));
     },
   },
-  extraReducers: {
-    [actionGetMovieList.pending]: (store) => {
-      // eslint-disable-next-line no-param-reassign
-      store.isLoading = true;
-    },
-    [actionGetMovieList.fulfilled]: (store, { payload }) => {
-      // eslint-disable-next-line no-param-reassign
-      store.movieList = payload.map((itemMovie) => (
-        { ...itemMovie, ratingForFilter: 0, likeForFilter: 0 }
-      ));
-      // eslint-disable-next-line no-param-reassign
-      store.movieListForRenderView = store.movieList;
-      // eslint-disable-next-line no-param-reassign
-      store.isLoading = false;
-    },
-    [actionGetMovieList.rejected]: (store, { payload }) => {
-      // eslint-disable-next-line no-param-reassign
-      store.error = payload;
-      // eslint-disable-next-line no-param-reassign
-      store.isLoading = false;
-    },
+  extraReducers: (builder) => {
+    builder
+      .addCase(actionGetMovieList.pending, (store) => {
+        // eslint-disable-next-line no-param-reassign
+        store.isLoading = true;
+      })
+      .addCase(actionGetMovieList.fulfilled, (store, { payload }) => {
+        // eslint-disable-next-line no-param-reassign
+        store.movieList = payload.map((itemMovie) => (
+          { ...itemMovie, ratingForFilter: 0, likeForFilter: 0 }
+        ));
+        // eslint-disable-next-line no-param-reassign
+        store.movieListForRenderView = store.movieList;
+        // eslint-disable-next-line no-param-reassign
+        store.isLoading = false;
+      })
+      .addCase(actionGetMovieList.rejected, (store, { payload }) => {
+        // eslint-disable-next-line no-param-reassign
+        store.error = payload;
+        // eslint-disable-next-line no-param-reassign
+        store.isLoading = false;
+      })
 
-    [actionGetActor.pending]: (store) => {
-      // eslint-disable-next-line no-param-reassign
-      store.isLoading = true;
-    },
-    [actionGetActor.fulfilled]: (store, { payload }) => {
-      // eslint-disable-next-line no-param-reassign
-      store.actorDescription = payload;
-      // eslint-disable-next-line no-param-reassign
-      store.isLoading = false;
-    },
-    [actionGetActor.rejected]: (store, { payload }) => {
-      // eslint-disable-next-line no-param-reassign
-      store.error = payload;
-    },
+      .addCase(actionGetActor.pending, (store) => {
+        // eslint-disable-next-line no-param-reassign
+        store.isLoading = true;
+      })
+      .addCase(actionGetActor.fulfilled, (store, { payload }) => {
+        // eslint-disable-next-line no-param-reassign
+        store.actorDescription = payload;
+        // eslint-disable-next-line no-param-reassign
+        store.isLoading = false;
+      })
+      .addCase(actionGetActor.rejected, (store, { payload }) => {
+        // eslint-disable-next-line no-param-reassign
+        store.error = payload;
+      });
   },
+
+  // extraReducers: {
+  //   [actionGetMovieList.pending]: (store) => {
+  //     // eslint-disable-next-line no-param-reassign
+  //     store.isLoading = true;
+  //   },
+  //   [actionGetMovieList.fulfilled]: (store, { payload }) => {
+  //     // eslint-disable-next-line no-param-reassign
+  //     store.movieList = payload.map((itemMovie) => (
+  //       { ...itemMovie, ratingForFilter: 0, likeForFilter: 0 }
+  //     ));
+  //     // eslint-disable-next-line no-param-reassign
+  //     store.movieListForRenderView = store.movieList;
+  //     // eslint-disable-next-line no-param-reassign
+  //     store.isLoading = false;
+  //   },
+  //   [actionGetMovieList.rejected]: (store, { payload }) => {
+  //     // eslint-disable-next-line no-param-reassign
+  //     store.error = payload;
+  //     // eslint-disable-next-line no-param-reassign
+  //     store.isLoading = false;
+  //   },
+  //
+  //   [actionGetActor.pending]: (store) => {
+  //     // eslint-disable-next-line no-param-reassign
+  //     store.isLoading = true;
+  //   },
+  //   [actionGetActor.fulfilled]: (store, { payload }) => {
+  //     // eslint-disable-next-line no-param-reassign
+  //     store.actorDescription = payload;
+  //     // eslint-disable-next-line no-param-reassign
+  //     store.isLoading = false;
+  //   },
+  //   [actionGetActor.rejected]: (store, { payload }) => {
+  //     // eslint-disable-next-line no-param-reassign
+  //     store.error = payload;
+  //   },
+  // },
 });
 
 export const {
