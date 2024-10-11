@@ -1,4 +1,4 @@
-# movies_magazine
+# movies_library
 
 Hello, here you can log in after a simple registration and see the most popular movies for today.
 You can also search for a movie by title (to do this, enter the name in the search bar and press Enter or the search icon button)
